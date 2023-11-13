@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Hướng dẫn sử dụng – GiHoTech Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,200&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="./css/style.css" rel="stylesheet" >
+    <link href="./css/search_style.css" rel="stylesheet" >
+    <link href="./css/menu.css" rel="stylesheet" >
+    <link href="./css/design_content.css" rel="stylesheet" >
+    <link href="./css/moving.css" rel="stylesheet" >
+    <link href="./css/onTop_onBottom.css" rel="stylesheet" >
+    <script src="./js/menu.js"></script>
+    <script src="./js/search02.js"></script>
+    <script src="./js/moving.js"></script>
+    <script src="./js/search_display.js"></script>
+    <script src="./js/results.js"></script>
+    <script src="./js/onTop_onBottom.js"></script>
+    <script src="./js/highlight02.js"></script>
+    <!-- <script src="./js/highlight03.js"></script> -->
+
+
+</head>
+<body>
+    <div class="no-spacing">
+        <div class="slogan">
+            <div class="text-container">
+                <span style="color:white;">BẠN MUA SỰ TIỆN LỢI, CHÚNG TÔI BÁN SỰ HÀI LÒNG</span>
+            </div>
+            <div class="button-container">
+                <a style="padding-left: 50px;" href="https://vietasoft.com.vn/chatviber"><i class="fab fa-viber" style="font-size: 19px;"> Chat Viber</i></a>
+                <a style="padding-left: 50px;" href="http://m.me/GiHoTech"><i class="fab fa-facebook-messenger" style="font-size: 19px;"> Chat Messenger</i></a>
+                <a style="padding-left: 50px;" href="tel:0902530968"><i class="fab fa-whatsapp" style="font-size: 19px;"> Call</i></a>
+            </div>
+        </div>
+    </div>
+
+     <!-- menu -->
+     <div class="no-spacing">
+        <div class="header">
+            <div class="logo">
+                <img width="200" height="50" src="./wrapcontent/image/logo.png" />
+            </div>
+            <div class="s129">
+                <form>
+                    <div class="inner-form">
+                        <div class="input-field">
+                            <input id="search-input" type="text" onkeyup="handleSearchInput(this.value);"
+                                placeholder="Ctrl + F, please" />
+                            <span>
+                                <button id="search-button" class="icon-button">
+                                    <img src="./wrapcontent/image/icon_glass.svg">
+                                </button>
+                            </span>
+                            <div class="container-show-results">
+                                <div class="show-results" id="search-results"></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="space-search-menu">
+                <div class="menu-container" onclick="myFunction(this),toggleGuide('menu-details', 'menu-details-summary')">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                    <div id="menu-details" style="display: none;">
+                        <ul>
+                            <li>
+                                <a href="http://guide.gihotech.vn/posm">
+                                    PHẦN MỀM QUẢN LÝ BÁN HÀNG CHUYÊN NGHIỆP - POSM
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guide.gihotech.vn/bos">
+                                    PHẦN MỀM QUẢN LÝ TÀI CHÍNH KẾ TOÁN - BOS
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guide.gihotech.vn/pur">
+                                    PHẦN MỀM QUẢN LÝ MUA HÀNG - PUR
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guide.gihotech.vn/hrm">
+                                    PHẦN MỀM QUẢN LÝ NHÂN SỰ - HRM
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="no-spacing">
+            <img class="image-background" src="./wrapcontent/image/background.png" alt="background" />
+        </div>
+
+    <!-- button on top và on bottom -->
+    <button onclick="scrollToTop()" id="btnScrollToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <button onclick="scrollToBottom()" id="btnScrollToBottom">
+        <i class="fas fa-chevron-down"></i>
+    </button>
+    
+        <!-- content  -->
+        <div id="content-login"></div>
+        <div id="content-file"></div>
+        <div id="content-sale"></div>
+        <div id="content-reception"></div>
+        <div id="content-house-keeping"></div>
+        <div id="content-reports"></div>
+        <div id="content-system"></div>
+        <div id="content-questions"></div>
+        <div id="content-breakfast"></div>        
+        <script>
+            const ids = ['content-login', 'content-file', 'content-sale', 'content-reception', 'content-house-keeping', 'content-reports', 'content-system', 'content-questions', 'content-breakfast'];
+            const urls = ['wrapcontent/content_login.html', 'wrapcontent/content_file.html', 'wrapcontent/content_sale.html', 'wrapcontent/content_reception.html', 'wrapcontent/content_house_keeping.html', 'wrapcontent/content_reports.html', 'wrapcontent/content_system.html', 'wrapcontent/content_questions.html', 'wrapcontent/content_breakfast.html'];
+
+            const fetchPromises = urls.map(url => fetch(url).then(response => response.text()));
+
+            Promise.all(fetchPromises)
+                .then(dataArray => {
+                    dataArray.forEach((data, index) => {
+                        const id = ids[index];
+                        document.getElementById(id).innerHTML = data;
+                    });
+                })
+                .catch(error => {
+                    console.error(error);
+                });        
+        </script>
+<style>       
+div + div {
+    margin-top: 0;
+  }
+
+  span.searchword { background-color: yellow; }
+.highlight{
+    background-color: yellow;
+}
+</style>
+
+<style>
+    /* CSS hiện tại */
+    @media (max-width: 600px) {
+        .logo {
+            display: none;
+        }
+
+        .s129 {
+            margin-top: 10px;
+        }
+
+        .s129 form .inner-form .input-field input {
+            width: 40vb;
+        }
+
+        .container-show-results {
+            width: 40vb;
+            max-height: 450px;
+        }
+
+        .menu-container {
+            position: absolute;
+            margin-top: -20px;
+            right: 30px;
+        }
+    }
+</style>
+</body>
+</html>
